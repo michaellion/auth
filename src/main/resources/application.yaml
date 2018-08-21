@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  address: localhost
+
+spring:
+  thymeleaf:
+    cache: false
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/resources?useSSL=false
+    username: root
+    password: jian
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    com:
+      tme:
+        dao:
+          UserDao£ºdebug
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: com.tme.Bean
